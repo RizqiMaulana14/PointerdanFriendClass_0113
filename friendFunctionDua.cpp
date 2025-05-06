@@ -6,3 +6,13 @@ class manusia{
     public:
     void showNimPelajar(pelajar &x)
 };
+
+class pelajar{
+    private:
+    int nilai;
+    
+    public:
+    pelajar() { nilai = 100; }
+    friend void manusia::showNimPelajar(pelajar&x);
+};
+
