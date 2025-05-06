@@ -4,7 +4,7 @@ using namespace std;
 class pelajar;
 class manusia{
     public:
-    void showNimPelajar(pelajar &x)
+    void showNilaiPelajar(pelajar &x);
 };
 
 class pelajar{
@@ -13,6 +13,9 @@ class pelajar{
     
     public:
     pelajar() { nilai = 100; }
-    friend void manusia::showNimPelajar(pelajar&x);
+    friend void manusia::showNilaiPelajar(pelajar&x);
 };
 
+void manusia::showNilaiPelajar(pelajar &x){
+    cout << x.nilai;
+}
